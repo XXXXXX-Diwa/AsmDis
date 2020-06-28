@@ -1,0 +1,19 @@
+.gba
+.open "MF.gba","SpawnYakuza.gba",0x8000000
+
+;SpawnYakuza: 
+.org 0x805BDC6
+B     0x805BDD8
+
+;CheckSamusCondition:
+.org 0x805BECE
+nop
+nop
+nop
+
+;RealYakuzaSpawn:
+.org 0x805BF04
+nop
+nop
+
+.close

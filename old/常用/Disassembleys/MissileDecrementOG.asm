@@ -1,0 +1,25 @@
+    08051B74 (T)  push    r14                                     ;5  128
+    08051B76 (T)  mov     r3,r0                                   ;2  130
+    08051B78 (T)  ldr     r1,=Equipment                           ;9  139
+    08051B7A (T)  ldrh    r0,[r1,8h]                              ;4  143
+    08051B7C (T)  cmp     r0,0h                                   ;2  145
+    08051B7E (T)  beq     8051B94h                                ;8  153
+    08051B80 (T)  sub     r0,1h                                   ;2  155
+    08051B82 (T)  strh    r0,[r1,8h]                              ;5  160
+    08051B84 (T)  lsl     r0,r0,10h                               ;2  162
+    08051B86 (T)  cmp     r0,0h                                   ;2  164
+    08051B88 (T)  bne     8051B94h                                ;8  172
+    08051B8A (T)  ldr     r0,=SamusWeaponInfo                     ;9  181
+    08051B8C (T)  ldrb    r1,[r0,2h]                              ;4  185
+    08051B8E (T)  mov     r2,1h                                   ;2  187
+    08051B90 (T)  eor     r1,r2                                   ;2  189
+    08051B92 (T)  strb    r1,[r0,2h]                              ;5  194
+    08051B94 (T)  mov     r0,40h                                  ;2  196
+    08051B96 (T)  strb    r0,[r3,12h]                             ;5  201
+    08051B98 (T)  ldrb    r1,[r3]                                 ;4  205
+    08051B9A (T)  mov     r0,0FBh                                 ;2  207
+    08051B9C (T)  and     r0,r1                                   ;2  209
+    08051B9E (T)  strb    r0,[r3]                                 ;5  214
+    08051BA0 (T)  pop     r0                                      ;4  218
+    08051BA2 (T)  bx      r0                                      ;8  226
+

@@ -1,0 +1,1 @@
+Picking up items is now quicker and smoother. You are no longer forced to go to the status screen every-time a new ability is collected. Version one has unknown items functioning as they usually do (requiring full suit to activate). Version two (the UN attachment) has the unknown items function as normal items. A majority of that uses biosparks unknown items asm.

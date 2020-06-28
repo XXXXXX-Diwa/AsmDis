@@ -1,0 +1,183 @@
+UNCATEGORIZED
+3679E4 = Samus Starting Intro
+554D34 = Looks like Credits tiles
+
+KRAID CONFRONTATION CUTSCENE
+36C1D8 = Kraid Opens Eyes 
+36F214 = Samus and Puff sprites for when Kraid rises
+36FDD8 = Kraid Rising
+3716FC = Cave BG for Kraid Confrontation cutscene
+
+MOTHER BRAIN SEES YOU CUTSCENE
+378E2C = MB's Eye (samus' reflection appears in it)
+37B404 = Samus on the elvator to Norfair (appears in MBs eye)
+37E2E0 = MB's eye opening
+37F498 = Close up on MB's eye. Pupil is shown
+382B00 = Overhead view of Mother Brain
+
+RIDLEY LANDING CUTSCENES
+387088 = Mother Ship with 2 small ships 
+3888FC = Ridley Inside of ship
+3909B8 = Ridley's Face
+39285C = BG of mothership
+396A88 = Mothership front and back
+3A0E14 = Zebes. Should be in this cutscene, not sure
+3A3F90, 3A4028, 3A4114, 3A4218, 3A4378, 3A44E0, 3A4664, 3A4790, 3A4830 = Parts of mothership
+3A97A4 = Rocky Surface Mothership Lands on
+3A9F18 = BG where the Mothership Lands
+3B107C = Ridley Headed to lair BG
+
+RIDLEY CONFRONTATION CUTSCENE
+3B6094 = Ridley Confrontation BG
+3B8CCC = Samus stance/Ridley flying in
+3BAF68 = Samus Closeup (visor ans eyes)
+3BE0D8 = Ridley reaching towards Samus with mouth closed/open
+
+MECHA RIDLEY SEES YOU
+3C0DFC = Mecha Ridley's (opened?) Eye. 
+3C91C0 = Sparkles and a circular thing. Sparkles Might be for title screen
+
+CHOZO GUARDIAN CUTSCENE
+3CE8F4 = Left Side of the Chozo Wall
+3D2838 = Right Side of Chozo Wall
+3DCB3C = Young Samus and Greyvoice
+3DE73C = Samus and Greyvoice at another angle
+3E22E4 = Young Samus Close up
+3CA1E4 = Samus Obtaining Fullsuit BG
+3F0610 = Statue room tiles. Could be for Statue activated cutscene
+
+ENTERING TOURIAN CUTSCENE
+3F0610 = BG of Tourian
+3F36A8 = Another BG layer of Tourian
+3F5D74, 3F5E50, 3F5F84 = Dead space pirates
+
+SAMUS LEAVING MOTHERSHIP CUTSCENE
+3F76A4 = Samus in Blue escape ship
+3FAF88 = Escape ship controls powering up
+480148 = Mothership blowing up/explosions
+5CA118 = Pirate Mothership Escape BG (Mothership's busy blowing up etc.) 
+5CF94C = Blue escape ship 
+5D5AE8 = Blue Escape ship with view of Samus inside
+5D8AD4 = Letters Used for "THE MISSION WAS COMPLETED SUCCESSFULLY" text 
+
+PAUSE SCREEN
+3FEFB8 = Map menu HUD
+4005A8 = English letters and symbols (Metroid Fusion Font)
+400698 = Sleep/Status Select Icons. Unused.
+40BFFC = Sleep/Status Select Icons. Used
+400808 = EN Status screen. Unused
+409D70 = JP Status screen. Used.
+400E08 = Status screen suits/icons/Other mixed icons. Unused
+4029F0 = Area names
+402D50 = Unknown item names. Probably unused.
+40C87C = Same as above.
+402E54 = Area names in Block letters
+4110C4 = Area names used in Map as well as a few map tiles 
+
+ENDING CUTSCENE
+4030B4 = Large part of Chozo Wall
+5BABB4 = Bottom of Chozo wall. Might be used for Chozo boss cutscene.
+5BED94 = Chozo wall. Bofore it zooms in.
+5C43F4 = Small picture of Young samus and some Chozo, after it zooms in.
+
+JAPANESE PAUSE MENU/AND OTHER THINGS
+409704 = Japanese Item names 
+40BB20 = Japanese Area Names
+40BE38 = Status screen things
+40C74C = More Japanese things unsure what they are
+40CDC0 = Japanese Area names in Blocky text
+
+
+
+
+FILESELECT SCREEN
+4124B0 = JP prompt to erase save data
+412884 = Prompt to erase ALL TEH Save data
+413890 = JP Prompt to erase ALL TEH Save data 
+413C64 = Same as 412884
+455F70 = Looks like BG for fileselect 
+458E14 = Japanese symbols and words for fileselect
+45A600 = English words for fileselect. 
+45C0F4 = EN Fileselect Graphics
+411B64 = File select/main menu window
+4122D8 = Not sure. Looks similar to 411B64.
+
+TITLE SCREEN
+4470E0 = Title Screen "METROID ZERO MISSION" GFX
+4481FC = Sparkles that appear around "METROID ZERO MISSION" letters
+4485FC = Space BG of title screen
+44B808 = additional background menu stuff
+44C47C = zebes surface on bottom of menu
+
+GAMEOVER SCREEN
+44F1BC = gameover
+451C84 = gameover selection (yes, resume) (no, return)
+4521B8 = Japanese Gameover selection 
+
+TITLESCREEN MOVIE
+45FDB4 = First boot intro scene (EMERGENCY ORDER, Starship Flies In)
+464CE4 = Samus in her Ship
+469E6C = Samus' ship heading towards Zebes 
+3763A4 = Mother Brain Frontal view
+
+ESCAPE TOURIAN CUTSCENE 
+46B18C = View of Zebes
+47CE20 = Samus' Ship Exploding
+47D014 = Another explosion
+481CCC = Samus in her Ship
+48531C = Samus in her ship with her Zero Suit
+48A17C = Another view of Zebes
+48E048 = Samus' ship flying away from Zebes/explosion on planet
+495308 = Space BG?
+4A2460 = Samus ship evading/space pirate ships/shots
+4A3B34 = Samus' ship just before it is shot
+4A4400 = Samus' ship is shot
+4AAE80 = FG for starship crash
+4AD56C = Samus' ship crashing to Zebes
+4AE878 = Starship crash explosion
+4B0E04 = Space Pirate ships looking for Samus
+4B1B90 = Some sort of BG
+4B9A98 = Zero Suit Samus looking at the Mothership
+4BC540 = BG for the when Samus looks at the Mothership
+
+
+
+FUSION GALLERY
+4C71D8 = Bottom half of Samus with the suit on
+4CFFE4 = Same as above, but different angle
+4D8818 = Samus lower body. Wearing shorts
+4E1EFC = Same as above. Different angle.
+4EC5B0 = Samus Legs and her lower body in BG
+4FA104 = Lower half of Samus running from Ridley
+5035FC = Metroid Fusion Game Box
+50D598 = Top half of Samus in her Suit
+517254 = Lower body of Samus in her Suit
+5214C4 = Samus Face, suitless
+52BD58 = Same as above, differnt angle
+5366AC = Same as above, but from multiple angles
+5404DC = Feet of Samus in running position
+
+ENDING IMAGES 
+555638 = Lower Half of Samus sitting on a Rock
+55F3B0 = Lower Half of Samus (with suit)
+569BB0 = Lower Half of Zero Suit Samus 
+573204 = Legs of Samus (wearing shorts)
+57CBD0 = Legs of Samus sitting in a stool (wearing shorts)
+585C8C = Lower Half of Backside of Samus (in shorts)
+590550 = Feet of Samus
+59AFB0 = Feet of Samus with explosions in BG (in suit)
+59F5A8 = "CLEAR TIME" "YOUR RATE FOR COLLECTING ITEMS IS" "SEE YOU NEXT MISSION" text. Also has ASCII letters.
+5A0234 = JP Version of Above. Unused.
+5A0F30 = "NEW RECORD" & "%" sign and a few numbers for Percentage
+5A1298 = Space BG. Used for posing sequence.
+5A46F0 = Looks like a light shining
+5A54D0 = Samus posing (shown before ending Image)
+5A6F38 = Same as above. Different Stance.
+5A8B38 = Same as above. Different Stance.
+5AA9B0 = Same as above. Different Stance.
+5AC794 = Same as above. Shown before her helmet/suit is taken of.
+5ADE64 = Samus in Zero Suit. Last of the sequence of poses. Only shown if player gets an ending without her suit on.
+5AF2BC = Same as 5AC794. Different palette.
+5B0E98 = Samus without her Helmet. Shown if player got an ending image with her suit on.
+ 
+

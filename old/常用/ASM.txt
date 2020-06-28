@@ -1,0 +1,12 @@
+
+
+Q: How do I apply an ASM file to my hack? (Both Games)
+A:In order to apply an ASM file to a ROM, you'll need a assembler, the ASM file, and your ROM all in the same directory. A good THUMB/ARM assembler known as armips is an easy to use program that allows you to apply these ASM files.You can find it here: https://www.romhacking.net/utilities/635/ Next, you'll have to look at your ASM file in a text editor and determine what your ROM name must be in order to apply the ASM. Most ASM files have something like this at the top of the code: 
+.gba
+.open "zm.gba","SparkControl.gba",0x8000000  
+What you will need to look for is on the second line. zm.gba Is the what the ASM file would like the unpatched ROM to be named. The second part: SparkControl.gba is the name of the output file. There is one final thing to consider before applying an ASM file. Freespace. Some codes may use the same freespace as others. This means they will conflict and most likely cause the game to crash/break/not work as intened. Most ASM programmers will put a comment, after something like this: .org 0x8043DF0 that says freespace or unused AI or sound. This is freespace. If two or more patches have the same address as freespace they wont work and one needs to be repointed. Repointing is explained in the How do I repoint patches? question. Once all that is done you can apply the patch in one of two ways. Drag the ASM file onto the armips.exe or run the command line in that directory and use this syntax:
+armips <asm_file_name>.asm
+If the file doesnt compile, the command line will tell you why. So if an ASM fails to produce an output file after dragging the ASM onto armips, try running it through the command line so you can find out what the issue is. From there you can fix it yourself or contact the author of the code. Armips also comes with a detailed README file. You'd do yourself a favor in reading that.
+
+
+

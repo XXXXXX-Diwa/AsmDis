@@ -1,0 +1,8 @@
+A little hack/patch that adds clipdata to the game that sucks and destroys bombs like in Samus Returns. Should be neat to see how people use this. You can adjust the speed of the "suck." The animated tiles are by OneOf99. You will have to make your own to use with this so it'll look as if a fan is pulling in air.
+
+Also, updated shinespark control patch for ZM, that allows you to resume boosting when you spark diagonally downward onto a solid block. At long last!
+
+
+一个小破解/补丁，增加了clipdata的吸引和摧毁萨姆斯返回炸弹的游戏。 应该很整洁，看看人们如何使用它。 你可以调整“吸”的速度。 动画的瓷砖由OneOf99制作。 你将不得不自己使用这个，这样看起来就好像一个风扇拉着空气一样。
+
+另外，更新了ZM的闪光乐园控制区域，让您可以在斜向下触发固体区块时恢复提升。 终于！

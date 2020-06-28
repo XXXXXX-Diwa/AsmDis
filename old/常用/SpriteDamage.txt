@@ -1,0 +1,2 @@
+Disassembley of Zero Mission's sprite damage routine. (Dealing damage to Samus) It can compile as is and will not change anything about the rom.
+解散零任务精灵伤害例程。 （对Samus造成的伤害）它可以按原样编译，不会改变任何关于ROM的内容。

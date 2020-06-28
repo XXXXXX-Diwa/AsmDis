@@ -1,0 +1,54 @@
+﻿.gba
+.open "zm.gba","healthchange.gba",0x8000000
+
+.org 804c024h   ;机鸟胸部血量增加例程
+    ldr r3,=82b0d68h ;2b0d68为精灵的血量攻击弱点掉落率等等基础的数据起始
+	ldrb r2,[r4,1dh] ;得到3000755的字节，为精灵的ID
+	lsl r1,r2,3h     ;把精灵的ID乘以8
+	add r1,r1,r2     ;然后再加一次精灵ID数
+	lsl r1,r1,1h     ;然后乘以2  此一系列操作相当于把原ID数值乘以18
+	add r1,r1,r3     ;把精灵的数据起始加上累积的结果
+	ldrh r1,[r1]     ;得到该地址的数值
+	strh r1,[r4,14h] ;写入300074c
+	lsl r0,r0,10h
+	lsr r0,r0,10h
+	cmp r0,64h       ;比较收集率是否是100%
+	bne noaddhealth   ;不是则跳转
+	ldrh r1,[r4,14h] ;读取已经写入的数值
+	lsl r0,r1,1h     ;乘以2
+	add r0,r0,r1     ;再加一次
+	strh r0,[r4,14h] ;再次写入      三倍
+.pool	
+noaddhealh:
+    ldrh r0,[r4,14h] ;读取300074c的数值
+    strh r0,[r5,10h] ;写入300081c
+	
+.org 804d174h   ;机鸟胸罩血量增加例程
+    ldr r2,=82b1be4h ;2b1be4h为副精灵的基础数据起始？
+	ldrb r1,[r3,1dh] ;得到3000755的字节，为精灵的ID
+	lsl r0,r1,3h     
+	add r0,r0,r2     ;相当于原数据乘以9
+	ldrh r0,[r0]     ;取出该地址数值
+	strh r0,[r3,14h] ;写入300074c
+	ldr r2,=300080ch 
+	ldrh r0,[r2,14h] ;3000820为之前设置的百分比
+	cmp r0,64h
+	bne noaddh2
+	ldrh r1,[r3,14h] ;读取之前已经写入的血量数值
+	lsl r0,r1,1h     
+	add r0,r0,r1
+	strh r0,[r3,14h] ;变三倍后再次写入
+.pool	
+noaddh2:	
+	ldrh r0,[r3,14h] ;读取血量
+	strh r0,[r2,12h] ;写入300081e
+	ldr r1,=300070ch
+	strh r0,[r1,0ah] ;写入3000716
+	strh r0,[r2,0ch] ;写入3000818
+.org 800e644h
+    ldrb r1,[r0] ;300039e的地址是查看主精灵还是副精灵？
+	mov r0,80h
+	and r0,r1
+	cmp r0,0h
+	beq 8
+    	

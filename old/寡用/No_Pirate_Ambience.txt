@@ -1,0 +1,3 @@
+With this patch, the pirate alarm will sounds like in vanilla Zero Mission, but the room music will resume once the alarm ends, rather than the never ending ambiance.
+
+有了这个补丁，海盗警报听起来就像在香草Zero Mission中听起来一样，但房间音乐会在闹铃结束后恢复，而不是永无止境的氛围。

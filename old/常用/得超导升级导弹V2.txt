@@ -1,0 +1,3 @@
+Just like in fusion, super missiles are now an upgrade rather than a separate item. Super missile packs award 10 missiles on easy and normal and 4 missile on hard, making them "large missile tanks." Grabbing a Super pack for the first time upgrades normal missiles to supers, the HUD reflects this. Also, the text is not changed by this patch like in the video, so you'll have to do that yourself in MAGE.
+
+就像在融合中一样，超级导弹现在是升级而不是单独的项目。 超级导弹包在轻松正常的情况下授予10枚导弹，在硬导弹上授予4枚导弹，使它们成为“大型导弹坦克”。 第一次抓住超级套装将正常导弹升级为超级套装，HUD反映了这一点。 另外，文本不会像视频中那样被此补丁修改，因此您必须在MAGE中自己执行此操作。

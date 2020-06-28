@@ -1,0 +1,1 @@
+ASM that gives two new clipdata (78:MorphShotLeft and 79:MorphShotRight) that shoot Samus when she rolls into them in morph ball form. Does not work if player has not rolled in. Thanks to CaptGlitch for helping me with this.

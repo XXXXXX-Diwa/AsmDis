@@ -1,0 +1,1 @@
+Double Jump for ZM! This code is used to give space jump a more prime-like feel. In other words, it makes space jump give 1 extra jump. The code is commented on how to change the amount of extra jumps. It uses the unused Crocomire AI as freespace. If you have another code that uses data there, use a hex editor to determine where the other code ends, and point this code there.

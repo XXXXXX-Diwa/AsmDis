@@ -1,0 +1,68 @@
+       .:::PROJECTILE SOUND GUIDE:::..
+
+By Black Falcon
+Various offsets to edit the sounds for beams, their combos + charge version 
+as well as missile sounds when fired. 
+
+________________________________________________
+|						|
+|Offset|_Index__|_______Weapon_______|_charged?_|
+
+$90C28F: 0B	> Power			no		
+$90C291: 0D	> wave			no
+$90C293: 0c	> ice 			no
+$90C295: 0E	> ice + wave		no
+$90C297: 0F	> spazer		no
+$90C299: 12	> spazer + wave		no
+$90C29B: 10	> spazer + ice		no
+$90C29D: 11	> spazer + wave + ice	no
+$90C29F: 13	> plasma		no
+$90C2A1: 16	> Plasma + wave	 	no	
+$90C2A3: 14	> Plasma + ice		no
+$90C2A5: 15	> Plasma + ice + wave	no
+$90C2A7: 17	> Power			yes
+$90C2A9: 19	> wave			yes
+$90C2AB: 18	> ice			yes
+$90C2AD: 1A	> ice + wave		yes
+$90C2AF: 1B	> spazer		yes
+$90C2B1: 1E	> spazer + wave		yes
+$90C2B3: 1C	> spazer + ice		yes
+$90C2B5: 1D	> spazer + wave + ice	yes
+$90C2B7: 1F	> plasma		yes
+$90C2B9: 22	> plasma + wave		yes
+$90C2BB: 20	> plasma + ice		yes
+$90C2BD: 21	> plasma + wave + ice	yes
+($90C2BD: 00	> Unused plasma + spazer combo)
+________________________________________________
+$90C2C1: 03	> Missile
+$90C2C3: 04	> Super Missile
+
+working sound values::
+ 00 > no sound
+ 01 > Powerbomb BOOM
+ 02 > no sound (used for clearing sounds I guess)
+ 03 > missile fire
+ 04 > super missile fire
+ 05 > Grapple (firing and latching?)
+ 06 > Grapple (latching a block)
+ 07 > Grapple short zap
+ 08 > Charging sound
+ 09 > X-Ray scanning sound
+ 0A > no sound (used for clearing sounds I guess)
+ 0B >\
+ to >} See above sounds
+ 22 >/
+ 23 > Ice SBA running
+ 24 > ice SBA firing (sounds cool actually)
+ 25 > spazer SBA firing
+ 26 > spazer SBA firing (end)
+ 27 > plasma SBA
+ 28 > wave SBA
+ 29 > no sound (used for clearing sounds I guess)
+ 2A > file selected sound (menu)
+ 2B > \
+ 2C > |
+ 2D > } no sound (used for clearing sounds I guess)
+ 2E > |
+ 2F > /
+ 30 or higher > other sounds which have nothing to do with projectiles >_>
