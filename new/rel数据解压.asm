@@ -33,7 +33,7 @@
 08056D4C 2003     mov     r0,3h		;DMA channel
 08056D4E 2100     mov     r1,0h		;值..
 08056D50 1C2A     mov     r2,r5		;内存地址
-08056D52 F7ACFAAF bl      80032B4h
+08056D52 F7ACFAAF bl      80032B4h	;fill
 08056D56 2300     mov     r3,0h
 
 @@restart:
@@ -111,6 +111,8 @@
 08056DC2 3301     add     r3,1h			;若进行了2字节的读取,r3也递增
 08056DC4 2900     cmp     r1,0h			;两者若都为0
 08056DC6 D028     beq     @@secondzero	;基本相当于直接结束了
+
+@@bit16re:
 08056DC8 2080     mov     r0,80h
 08056DCA 0200     lsl     r0,r0,8h		;8000
 08056DCC 4008     and     r0,r1			;第二个字节是否有80
@@ -140,7 +142,9 @@
 
 @@secondandthirdorr7Fzero:
 08056DF8 3401     add     r4,1h
-08056DFA E006     b       8056E0Ah
+08056DFA E006     b       @@bit16Zero
+
+@@loop2:
 08056DFC 7820     ldrb    r0,[r4]
 08056DFE 7010     strb    r0,[r2]
 08056E00 3401     add     r4,1h
@@ -149,7 +153,9 @@
 
 @@SecondNo802:
 08056E06 2900     cmp     r1,0h
-08056E08 D1F8     bne     8056DFCh
+08056E08 D1F8     bne     @@loop2
+
+@@bit16Zero:
 08056E0A 7821     ldrb    r1,[r4]
 08056E0C 3401     add     r4,1h
 08056E0E 0209     lsl     r1,r1,8h
@@ -157,7 +163,7 @@
 08056E12 4301     orr     r1,r0
 08056E14 3401     add     r4,1h
 08056E16 2900     cmp     r1,0h
-08056E18 D1D6     bne     8056DC8h
+08056E18 D1D6     bne     @@bit16re
 
 @@secondzero:
 08056E1A 2B01     cmp     r3,1h		;如果中途切换了单字节和双字节则结束
