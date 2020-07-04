@@ -11,18 +11,6 @@
 00000BBC E12FFF1E bx      r14
 
 
-00000BC0 467B     mov     r3,r15
-00000BC2 4718     bx      r3
-00000BC4 E92D47F0 stmfd   [r13]!,r4-r10,r14
-00000BC8 E1A0A582 mov     r10,r2,lsl 0Bh
-00000BCC E1B0C4AA movs    r12,r10,lsr 9h
-00000BD0 EBFFFFF3 bl      0BA4h
-00000BD4 0A000012 beq     0C24h
-00000BD8 E081A4AA add     r10,r1,r10,lsr 9h
-00000BDC E1B02CA2 movs    r2,r2,lsr 19h
-00000BE0 3A00000B bcc     0C14h
-
-
 000010FC>E92D4070 stmfd   [r13]!,r4-r6,r14	;压栈 保存寄存器
 00001100 E4905004 ldr     r5,[r0],4h		;r5读取r0 r0+4h
 00001104 E1A02425 mov     r2,r5,lsr 8h		;r5给r2并且右移8h	解压后的总长度
