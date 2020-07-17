@@ -1,4 +1,4 @@
-.gba
+﻿.gba
 .open "zm.gba","HUD.gba",0x8000000
 
 .definelabel HideHUD,0x300004A
@@ -6,6 +6,7 @@
 .definelabel OAMData,0x3000E7C
 .definelabel NextOAMSlot,0x3001382
 .definelabel SamusEquipment,0x3001530
+;重写Draw Hub,节省200-300字节...by船长
 
 .org 0x8052308 ; rewritten draw hud function 429 lines or less
 	push	r4

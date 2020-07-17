@@ -32,7 +32,7 @@
 0800B4AA 4008     and     r0,r1
 0800B4AC 2800     cmp     r0,0h					;检查重力服是否激活
 0800B4AE D02B     beq     @@GravitySuitNoActivation
-0800B4B0 490C     ldr     r1,=82383C8h
+0800B4B0 490C     ldr     r1,=82383C8h			;全装甲+重力服
 0800B4B2 4688     mov     r8,r1					;重力服主调色板
 0800B4B4 4A0C     ldr     r2,=8238428h			;重力服short光束调色
 0800B4B6 4694     mov     r12,r2
@@ -53,7 +53,7 @@
 0800B4D4 E0A6     b       @@Peer
 .pool
 
-@@GravitySuitNoActivation:
+@@GravitySuitNoActivation:						;全装甲 + 无重力
 0800B508 4809     ldr     r0,=8237FA8h
 0800B50A 4680     mov     r8,r0
 0800B50C 4909     ldr     r1,=8238008h
@@ -84,7 +84,7 @@
 0800B55E 4008     and     r0,r1
 0800B560 2800     cmp     r0,0h					;检查隔热服是否开启
 0800B562 D027     beq     @@VariaNoActivation
-0800B564 480A     ldr     r0,=8237BE8h
+0800B564 480A     ldr     r0,=8237BE8h			;非全装+隔热
 0800B566 4680     mov     r8,r0
 0800B568 490A     ldr     r1,=8237C48h
 0800B56A 468C     mov     r12,r1
@@ -106,7 +106,7 @@
 .pool
 
 @@VariaNoActivation
-0800B5B4 4A09     ldr     r2,=82376A8h
+0800B5B4 4A09     ldr     r2,=82376A8h			;无全装 无隔热
 0800B5B6 4690     mov     r8,r2
 0800B5B8 4809     ldr     r0,=8237708h
 0800B5BA 4684     mov     r12,r0

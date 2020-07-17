@@ -1,0 +1,35 @@
+08045FC4 F7FEFEFA bl      8044DBCh  ;00h  检查是否从0门入,以及生产舱盖                        
+08045FC8 E031     b       @@OtherPose     0门入55,脑活9,脑死F                          
+08045FCA F7FFF80B bl      8044FE4h  ;09h                              
+08045FCE E02E     b       @@OtherPose                                
+08045FD0 F7FFF828 bl      8045024h  ;22h                              
+08045FD4 E02B     b       @@OtherPose                                
+08045FD6 F7FFF88B bl      80450F0h  ;23h                              
+08045FDA E028     b       @@OtherPose                                
+08045FDC F7FFF936 bl      804524Ch  ;24h                              
+08045FE0 E025     b       @@OtherPose                                
+08045FE2 F7FFF9B9 bl      8045358h  ;25h                              
+08045FE6 E022     b       @@OtherPose                                
+08045FE8 F7FFFA12 bl      8045410h  ;27h                              
+08045FEC E01F     b       @@OtherPose                                
+08045FEE F7FFFA3B bl      8045468h  ;28h                              
+08045FF2 E01C     b       @@OtherPose                                
+08045FF4 F7FFFA4A bl      804548Ch  ;29h                              
+08045FF8 E019     b       @@OtherPose                                
+08045FFA F7FFFA5B bl      80454B4h  ;2ah                              
+08045FFE E016     b       @@OtherPose                                
+08046000 F7FFF96C bl      80452DCh  ;42h                              
+08046004 E013     b       @@OtherPose                                
+08046006 F7FFF98B bl      8045320h  ;43h                              
+0804600A E010     b       @@OtherPose                                
+0804600C F7FFFA66 bl      80454DCh  ;0fh  母脑死等待入舱的例程 11                             
+08046010 E00D     b       @@OtherPose                                
+08046012 F7FFFA8B bl      804552Ch  ;11h  入舱的例程 13                           
+08046016 E00A     b       @@OtherPose                                
+08046018 F7FFFAFA bl      8045610h  ;13h  起飞合盖阶段 15                          
+0804601C E007     b       @@OtherPose                                
+0804601E F7FFFB33 bl      8045688h  ;15h  起飞并浮空阶段 17                            
+08046022 E004     b       @@OtherPose                                
+08046024 F7FFFB70 bl      8045708h  ;17h  飞船爬升出谷  19                          
+08046028 E001     b       @@OtherPose                                
+0804602A F7FEFFB7 bl      8044F9Ch  ;55h

@@ -1,0 +1,53 @@
+[6:09 PM]  Amaroq Softfur: @Cosmic seems that numbers in dialogue don't use the new graphics, but instead still use the old ones. Not too big a deal, just slightly awkward.
+[6:13 PM]  Amaroq Softfur: Uh-oh.
+[6:15 PM]  Amaroq Softfur:
+https://cdn.discordapp.com/attachments/330016119723393034/680930687175360542/test-0.png
+[6:19 PM]  biospark: that's why he said you'll have to edit the messages yourself
+[6:19 PM]  Amaroq Softfur: But this seems like a different problem.
+[6:20 PM]  biospark: fusion uses two characters for button icons
+[6:20 PM]  biospark: zm only uses one
+[6:20 PM]  Amaroq Softfur: Ah
+[6:20 PM]  Amaroq Softfur: That's... weird.
+[6:22 PM]  Amaroq Softfur: I thought by editing the text, he just meant the word wrap and the like
+[6:23 PM]  biospark: I suppose you could also change the character widths for the button icons to their original values in fusion
+[6:24 PM]  biospark: I think that would fix it
+[6:24 PM]  Cosmic: I don't know why those are broken as the only thing that I copied over was the section starting from the super Mario world font 0 to the second set of numerals (0-9) that is normally a blank spot in fusion's text
+[6:27 PM]  Cosmic: I'm pretty sure that biospark made a table that explains which bytes are which characters for the pool of character widths
+[6:27 PM]  Cosmic: so if you replaced the ones for L and R with vanilla's you would be ok
+[6:28 PM]  Kazuto: Oh that's right, Fusion uses OG GBA button icons, Zero Mission uses GBA SP button icons :stuck_out_tongue:
+[6:28 PM]  Kazuto: Shorter shoulder buttons, whynot
+[6:30 PM]  Amaroq Softfur: Fusion also has those buttons in its GFX IIRC
+[6:30 PM]  Cosmic: fusion and zero mission have two different looking l & r button options
+[6:30 PM]  Cosmic: and you can actually choose them, you just have to know what hex value they are
+[6:30 PM]  biospark: if you only copied over a portion of the graphics, then you should only copy the same portion of character widths
+[6:31 PM]  Amaroq Softfur: I would have copied the whole graphics.
+[6:31 PM]  Cosmic: yeah that was a fallacy on my part
+[6:31 PM]  Cosmic: I did not think much of it I just copied 4A0 bytes
+[6:31 PM]  Cosmic: thinking it would be just like porting the graphics to USA zero mission
+[6:31 PM]  Amaroq Softfur: If only the GBA SP had a slightly different register value somewhere when it booted up, that way games could autodetect which buttons to display :P
+[6:32 PM]  Cosmic: im sure there's ways to determine that
+[6:32 PM]  Cosmic: but its not worth it
+[6:33 PM]  Amaroq Softfur: Some games with gyros detect what model you're using by the orientation the cartridge is in when you boot up.
+[6:33 PM]  Amaroq Softfur: But that's completely different.
+[6:37 PM]  Cosmic: that wouldn't be very useful for hacks
+[6:38 PM]  Cosmic: The Best of the Best, the everdrive GBA X5, doesnt have gyro or a light sensor
+[6:38 PM]  Amaroq Softfur: No it would not.
+[6:38 PM]  Amaroq Softfur: Imagine if MAGE had a WYSIWYG editor for text.
+[6:39 PM]  Amaroq Softfur: Where you could click on and edit the preview directly, and just select some text and click on the color you want.
+[6:50 PM]  Amaroq Softfur: At least select Yes or No works correctly.
+[6:50 PM]  Amaroq Softfur: Still, we'll need to figure out how to make the text use the Zero Mission numbers instead of the Super Mario World numbers
+[6:53 PM]  Cosmic: wat
+[6:54 PM]  Cosmic: the "smw style" numbers arent seen in gameplay iirc they are just placeholders
+[6:54 PM]  Amaroq Softfur: Oh
+[6:54 PM]  Amaroq Softfur: Uh
+[6:54 PM]  Cosmic: just open your patched rom up in tile molester, click and drag the zm style number row over the regular fusion one and save it
+[6:55 PM]  Amaroq Softfur: I'm dumb
+[6:55 PM]  Cosmic: the zm looking one will be below the caps and lowercase characters
+[6:55 PM]  Cosmic: in vanilla fusion it's a big blank spot there
+[6:55 PM]  Amaroq Softfur: Character widths are slightly different between the two sets of numbers.
+[6:59 PM]  Cosmic: got some ss?
+[7:00 PM]  Cosmic: wait
+[7:00 PM]  Cosmic: why the fuck is this discussion in here I thought this was #hacking
+[7:01 PM]  Amaroq Softfur: facepalms
+[7:01 PM]  Cosmic: You use the dedicated channels to post resources, not discuss them
+[7:03 PM]  Amaroq Softfur: Well... I'll save a text log.

@@ -1,0 +1,129 @@
+Opcode                          Syntax          Shorthand               Description
+Shift instructions
+000 00 iiiii sss ddd            lsl rd,rs,#i                            Shift left to rd, rs by i
+000 01 iiiii sss ddd            lsr rd,rs,#i                            Shift right to rd, rs by i
+000 10 iiiii sss ddd            asr rd,rs,#i                            Arithmetic shift right to rd, rs by i
+
+Add/subtract instructions
+00011 00 rrr sss ddd            add rd,rs,rr                            Add to rd, rs and rr
+00011 01 rrr sss ddd            sub rd,rs,rr                            Subtract to rd, rs by rr
+00011 10 iii sss ddd            add rd,rs,#i                            Add to rd, rs and i
+00011 11 iii sss ddd            sub rd,rs,#i                            Subtract to rd, rs by i
+
+Add/move/compare/subtract immediate instructions
+001 00 ddd iiiiiiii             mov rd,#i       2dii                    Move to rd, i
+001 01 ddd iiiiiiii             cmp rd,#i       2(8+d)ii                Compare to rd, i
+001 10 ddd iiiiiiii             add rd,#i       3dii                    Add to rd, i
+001 11 ddd iiiiiiii             sub rd,#i       3(8+d)dii               Subtract from rd,i
+
+Logical/arithmetic instructions
+010000 0000 sss ddd             and rd,rs                               AND to rd, rs
+010000 0001 sss ddd             eor rd,rs                               XOR to rd, rs
+010000 0010 sss ddd             lsl rd,rs                               Shift left to rd, rs
+010000 0011 sss ddd             lsr rd,rs                               Shift right to rd, rs
+010000 0100 sss ddd             asr rd,rs                               Arithmetic shift right to rd, rs
+010000 0101 sss ddd             adc rd,rs                               Add to rd, rs with carry
+010000 0110 sss ddd             sbc rd,rs                               Subtract from rd, rs with carry
+010000 0111 sss ddd             ror rd,rs                               Rotate right to rd, rs
+010000 1000 sss ddd             tst rd,rs                               Test to rd, rs
+010000 1001 sss ddd             neg rd,rs                               Negate to rd, rs
+010000 1010 sss ddd             cmp rd,rs                               Compare to rd, rs
+010000 1011 sss ddd             cmn rd,rs                               Negative compare to rd, rs
+010000 1100 sss ddd             orr rd,rs                               OR to rd, rs
+010000 1101 sss ddd             mul rd,rs                               Multiply to rd, rs
+010000 1110 sss ddd             bic rd,rs                               Bit clear to rd, rs
+010000 1111 sss ddd             mvn rd,rs                               Move NOT to rd, rs
+
+Hi-register instructions
+010001 00 d s sss ddd           add rd,rs                               Add to rd, rs
+010001 01 d s sss ddd           cmp rd,rs                               Compare to rd, rs
+010001 10 d s sss ddd           mov rd,rs                               Move to rd, rs
+010001 10 1 1 000 000           nop                                     No process (move to r8, r8)
+
+Branch register instructions
+010001110 ssss 000              bx rs                                   Branch to rs
+
+Load PC relative instruction
+01001 ddd iiiiiiii              ldr rd,[pc,#i]  4(8+d)ii                Load to rd, pc + i<<2
+
+Load/store instructions
+0101 000 rrr ddd sss            str rs,[rd,rr]                          Store rs to rd + rr 32-bit
+0101 001 rrr ddd sss            strh rs,[rd,rr]                         Store rs to rd + rr 16-bit
+0101 010 rrr ddd sss            strb rs,[rd,rr]                         Store rs to rd + rr 8-bit
+0101 011 rrr sss ddd            ldsb rd,[rs,rr]                         Load to rd, rs + rr �8-bit
+0101 100 rrr sss ddd            ldr rd,[rs,rr]                          Load to rd, rs + rr 32-bit
+0101 101 rrr sss ddd            ldrh rd,[rs,rr]                         Load to rd, rs + rr 16-bit
+0101 110 rrr sss ddd            ldrb rd,[rs,rr]                         Load to rd, rs + rr 8-bit
+0101 111 rrr sss ddd            ldsh rd,[rs,rr]                         Load to rd, rs + rr �16-bit
+
+Load/store instructions
+011 00 iiiii ddd sss            str rs,[rd,#i]                          Store rs to rd + i<<2 32-bit
+011 01 iiiii sss ddd            ldr rd,[rs,#i]                          Load to rd, rs + i<<2 32-bit
+011 10 iiiii ddd sss            strb rs,[rd,#i]                         Store rs to rd + i 8-bit
+011 11 iiiii sss ddd            ldrb rd,[rs,#i]                         Load to rd, rs + i 8-bit
+
+Load/store instructions
+1000 0 iiiii ddd sss            strh rs,[rd,#i]                         Store rs to rd + i<<1 16-bit
+1000 1 iiiii sss ddd            ldrh rd,[rs,#i]                         Load to rd, rs + i<<1 16-bit
+
+Load/store SP relative instructions
+1001 0 sss iiiiiiii             str rs,[sp,#i]  9sii                    Store rs to sp + i<<2
+1001 1 ddd iiiiiiii             ldr rd,[sp,#i]  9(8+s)ii                Load to rd, sp + i<<2
+
+Add PC/SP relative instructions
+1010 0 ddd iiiiiiii             add rd,pc,#i    Asii                    Add to rd, pc + i<<2
+1010 1 ddd iiiiiiii             add rd,sp,#i    A(8+s)ii                Add to rd, sp + i<<2
+
+Add to SP instructions
+10110000 0 iiiiiii              add sp,#i       B0ii                    Add to sp, i<<2
+10110000 1 iiiiiii              add sp,-#i      B0(80+ii)               Add to sp, -i<<2
+
+Stack instructions
+1011 01 00 dddddddd             push {rd}       B4dd                    Push bit corrosponding registers (high to low)
+1011 01 01 dddddddd             push {rd,lr}    B5dd                    Push lr and bit corrosponding registers (high to low)
+1011 11 00 dddddddd             pop {rd}        BCdd                    Pop bit corrosponding registers (low to high)
+1011 11 01 dddddddd             pop {rd,pc}     BDdd                    Pop bit corrosponding registers and pc (low to high)
+
+Psuedo-DMA instructions
+1100 0 ddd ssssssss             stmia rd!,{rs}  Cdss                    Store to rd, bit corrosponding registers and increment rd
+1100 1 sss dddddddd             ldmia rs!,{rd}  C(8+s)dd                Load rs to bit corrosponding registers and increment rs
+
+Conditional branch instructions
+1101 0000 iiiiiiii              beq i           D0ii                    Branch 켲<<1 instructions after next if Zero set
+                                                                                cmp: if equal
+1101 0001 iiiiiiii              bne i           D1ii                    Branch 켲<<1 instructions after next if Zero clear
+                                                                                cmp: if not equal
+1101 0010 iiiiiiii              bcs i           D2ii                    Branch 켲<<1 instructions after next if Carry set
+                                                                                cmp: if unsigned higher or same
+1101 0011 iiiiiiii              bcc i           D3ii                    Branch 켲<<1 instructions after next if Carry clear
+                                                                                cmp: if unsigned lower
+1101 0100 iiiiiiii              bmi i           D4ii                    Branch 켲<<1 instructions after next if Negative set
+                                                                                cmp: if negative
+1101 0101 iiiiiiii              bpl i           D5ii                    Branch 켲<<1 instructions after next if Negative clear
+                                                                                cmp: if positive
+1101 0110 iiiiiiii              bvs i           D6ii                    Branch 켲<<1 instructions after next if oVerflow set
+                                                                                cmp: if became positive
+1101 0111 iiiiiiii              bvc i           D7ii                    Branch 켲<<1 instructions after next if oVerflow clear
+                                                                                cmp: if not became positive
+1101 1000 iiiiiiii              bhi i           D8ii                    Branch 켲<<1 instructions after next if Carry set + Zero clear
+                                                                                cmp: if unsigned higher
+1101 1001 iiiiiiii              bls i           D9ii                    Branch 켲<<1 instructions after next if Carry clear / Zero clear
+                                                                                cmp: if unsigned lower or same
+1101 1010 iiiiiiii              bge i           DAii                    Branch 켲<<1 instructions after next if Negative=oVerflow
+                                                                                cmp: if signed greater or equal
+1101 1011 iiiiiiii              blt i           DBii                    Branch 켲<<1 instructions after next if Negative!=oVerflow
+                                                                                cmp: if signed less than
+1101 1100 iiiiiiii              bgt i           DCii                    Branch 켲<<1 instructions after next if Zero clear + Negative=oVerflow
+                                                                                cmp: if signed greater than
+1101 1101 iiiiiiii              ble i           DDii                    Branch 켲<<1 instructions after next if Zero set / Negative!=oVerflow
+                                                                                cmp: if signed less than or equal
+
+Interrupt instruction
+11011111 iiiiiiii               swi #i          DFii                    Jump to 00000008; enter supervisor mode
+                                                                                ARM state, IRQs disabled
+Branch instruction
+11100 iiiiiiiiiii               b i             Eiii                    Branch 켲<<1 instructions after next 
+
+Branch with link instruction
+11110 iiiiiiiiiii                               
+11111 iiiiiiiiiii               bl i                                    Save pc|1 to lr and branch 켲<<1 instructions

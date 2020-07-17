@@ -1,0 +1,98 @@
+
+undefined4 FUN_0801b824(void)
+
+{
+  byte Msg_Num;
+  byte bVar1;
+  uint uVar2;
+  undefined4 Track_Num;
+  int iVar3;
+  undefined4 in_lr;
+  
+  bVar1 = SpriteDataStruct_03000738.Timer1_;
+  Msg_Num = SpriteDataStruct_03000738.RoomSlot_PartNumber;
+  DAT_03001606 = 1000;
+  if (SpriteDataStruct_03000738.Timer1_ == 0) {
+    iVar3 = FUN_0800fbc8();
+    if (iVar3 == 0) {
+      return in_lr;
+    }
+    SpriteDataStruct_03000738.AnimCtr = bVar1;
+    SpriteDataStruct_03000738.CurrentAnim = 0;
+    SpriteDataStruct_03000738.Pose = 0x23;
+    if (SpriteDataStruct_03000738.OAMPtr == &PTR_DAT_082cbacc) {
+      SpriteDataStruct_03000738.OAMPtr = &PTR_DAT_082cbb5c;
+      if (Msg_Num == 0x20) {
+        SpriteDataStruct_03000738.YPosSpawn = 0x154;
+        SpriteDataStruct_03000738.CurrentAnim = 0;
+        SpriteDataStruct_03000738.Pose = 0x23;
+        return in_lr;
+      }
+      SpriteDataStruct_03000738.YPosSpawn = 100;
+      SpriteDataStruct_03000738.CurrentAnim = 0;
+      SpriteDataStruct_03000738.Pose = 0x23;
+      return in_lr;
+    }
+    SpriteDataStruct_03000738.OAMPtr = &PTR_DAT_082cbabc;
+    SpriteDataStruct_03000738.YPosSpawn = 100;
+    if (Msg_Num == 0x16) {
+      FUN_0800e258(0xe,0,SpriteDataStruct_03000738.SprtSetGFXSlot,
+                   SpriteDataStruct_03000738.PrimSprtRAMSlot,0x3f,0x96,0);
+      return in_lr;
+    }
+    if (1 < (byte)(Msg_Num - 0x21)) {
+      SpriteDataStruct_03000738.YPosSpawn = 100;
+      SpriteDataStruct_03000738.CurrentAnim = 0;
+      SpriteDataStruct_03000738.Pose = 0x23;
+      return in_lr;
+    }
+    FUN_08053a48();
+    return in_lr;
+  }
+  SpriteDataStruct_03000738.AnimCtr = SpriteDataStruct_03000738.AnimCtr - 1;
+  uVar2 = FUN_0806f28c();
+  if (uVar2 == 0) {
+    return in_lr;
+  }
+  SpriteDataStruct_03000738.Timer1_ = 0;
+  SpriteDataStruct_03000738.Status = SpriteDataStruct_03000738.Status & 0xfffb;
+  if ((byte)(Msg_Num - 8) < 0xe) {
+    SpriteDataStruct_03000738.Unknown = 1;
+    FUN_0800408c();
+    if (((Msg_Num == 0xc) || (Msg_Num == 0xf)) || (Msg_Num == 0x14)) {
+      Track_Num = 0x42;
+    }
+    else {
+      Track_Num = 0x37;
+    }
+  }
+  else {
+    if (((Msg_Num == 3) || (Msg_Num == 5)) || (Msg_Num == 7)) {
+      SpriteDataStruct_03000738.Unknown = 1;
+      FUN_0800408c();
+      Track_Num = 0x37;
+    }
+    else {
+      if (Msg_Num != 0x20) {
+        if (Msg_Num != 0x16) {
+          if ((((byte)(Msg_Num - 1) < 2) || (Msg_Num == 4)) || (Msg_Num == 6)) {
+            FUN_0800408c();
+          }
+          PlaySound1(0x3a);
+        }
+        goto LAB_0801b8f2;
+      }
+      Mus_Related_39f4(0x19,0);
+      Track_Num = 0x4a;
+    }
+  }
+  PlayMusic(Track_Num,0);
+LAB_0801b8f2:
+  if (((SpriteDataStruct_03000738.Unknown != 0) || (Msg_Num == 0x17)) ||
+     ((byte)(Msg_Num - 0x1b) < 6)) {
+    SpriteDataStruct_03000738.OAMPtr = &PTR_DAT_082cbacc;
+    SpriteDataStruct_03000738.AnimCtr = 0;
+    SpriteDataStruct_03000738.CurrentAnim = 0;
+  }
+  return in_lr;
+}
